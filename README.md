@@ -44,3 +44,19 @@ IntelliJ IDEA菜单选择：IntelliJ IDEA->settings->Build,Execution,Deployment-
 - Lombok
 
 
+
+# 打包运行
+
+~~~
+//打包
+mvn clean package -Dmaven.test.skip=true -U
+
+//运行ad-eureka
+java -jar ad-eureka/target/ad-eureka-1.0-SNAPSHOT.jar --spring.profiles.active=server1
+java -jar ad-eureka/target/ad-eureka-1.0-SNAPSHOT.jar --spring.profiles.active=server2
+java -jar ad-eureka/target/ad-eureka-1.0-SNAPSHOT.jar --spring.profiles.active=server3
+
+//运行getway
+java -jar ad-getway/target/ad-getway-1.0-SNAPSHOT.jar
+~~~
+
