@@ -37,4 +37,10 @@ IntelliJ IDEA菜单选择：IntelliJ IDEA->settings->Build,Execution,Deployment-
 
 IntelliJ IDEA菜单选择：IntelliJ IDEA->settings->Build,Execution,Deployment->Build Tools->Maven
 找到 Maven home path 修改成 /usr/local/Cellar/maven@3.8
+
 ~~~
+
+### IntelliJ IDEA插件
+- Lombok
+
+

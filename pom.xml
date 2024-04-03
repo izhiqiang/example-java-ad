@@ -12,6 +12,7 @@
 
     <modules>
         <module>ad-eureka</module>
+        <module>ad-getway</module>
     </modules>
 
     <!--项目名称与描述-->
