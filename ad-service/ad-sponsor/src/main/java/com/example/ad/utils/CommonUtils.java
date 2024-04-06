@@ -1,6 +1,6 @@
 package com.example.ad.utils;
 
-import com.example.ad.exception.CommonException;
+import com.example.ad.exception.BusinessException;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang.time.DateUtils;
 
@@ -16,13 +16,13 @@ public class CommonUtils {
         return DigestUtils.md5Hex(value).toUpperCase();
     }
 
-    public static Date parseStringDate(String dateString) throws CommonException {
+    public static Date parseStringDate(String dateString) throws BusinessException {
         try {
             return DateUtils.parseDate(
                     dateString, parsePatterns
             );
         } catch (Exception ex) {
-            throw new CommonException(ex.getMessage());
+            throw new BusinessException(ex.getMessage());
         }
     }
 }

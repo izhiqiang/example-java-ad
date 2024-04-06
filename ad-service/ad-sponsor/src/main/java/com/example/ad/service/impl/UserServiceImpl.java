@@ -2,7 +2,7 @@ package com.example.ad.service.impl;
 
 import com.example.ad.dao.AdUserRepository;
 import com.example.ad.entity.AdUser;
-import com.example.ad.exception.CommonException;
+import com.example.ad.exception.BusinessException;
 import com.example.ad.service.IUserService;
 import com.example.ad.utils.CommonUtils;
 import com.example.ad.vo.CreateUserRequest;
@@ -16,14 +16,14 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
-    public CreateUserResponse createUser(CreateUserRequest request) throws CommonException {
+    public CreateUserResponse createUser(CreateUserRequest request) throws BusinessException {
         if (!request.validate()) {
-            throw new CommonException("请求参数错误");
+            throw new BusinessException("请求参数错误");
         }
         AdUser oldUser = userRepository.
                 findByUsername(request.getUsername());
         if (oldUser != null) {
-            throw new CommonException("存在同名的用户");
+            throw new BusinessException("存在同名的用户");
         }
         AdUser newUser = userRepository.save(new AdUser(
                 request.getUsername(),
