@@ -17,11 +17,13 @@ import com.example.ad.exception.BusinessException;
 import com.example.ad.service.IAdUnitService;
 import com.example.ad.vo.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
+@Service
 public class AdUnitServiceImpl implements IAdUnitService {
 
     private final AdPlanRepository planRepository;

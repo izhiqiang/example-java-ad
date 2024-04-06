@@ -7,7 +7,9 @@ import com.example.ad.service.IUserService;
 import com.example.ad.utils.CommonUtils;
 import com.example.ad.vo.CreateUserRequest;
 import com.example.ad.vo.CreateUserResponse;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserServiceImpl implements IUserService {
     private final AdUserRepository userRepository;
 
