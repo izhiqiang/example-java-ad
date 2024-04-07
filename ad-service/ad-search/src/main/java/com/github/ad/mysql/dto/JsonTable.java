@@ -6,13 +6,13 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-//参考ad-service/ad-search/src/main/resources/binlog_jsontable.json
+//参考ad-service/ad-search/src/main/resources/template.json
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class JsonTable {
     private String tableName;
-    private String level;
+    private Integer level;
 
     private List<Column> insert;
     private List<Column> update;

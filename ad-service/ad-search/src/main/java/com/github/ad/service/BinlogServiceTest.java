@@ -13,6 +13,22 @@ import java.io.IOException;
  * binlog 日志的格式 show variables like `binlog_format`
  */
 public class BinlogServiceTest {
+
+//    Write---------------
+//    WriteRowsEventData{tableId=85, includedColumns={0, 1, 2}, rows=[
+//    [10, 10, 宝马]
+//]}
+//    Update--------------
+//    UpdateRowsEventData{tableId=85, includedColumnsBeforeUpdate={0, 1, 2},
+// includedColumns={0, 1, 2}, rows=[
+//        {before=[10, 10, 宝马], after=[10, 11, 宝马]}
+//]}
+//    Delete--------------
+//    DeleteRowsEventData{tableId=85, includedColumns={0, 1, 2}, rows=[
+//    [11, 10, 奔驰]
+//]}
+
+
     public static void main(String[] args) {
         BinaryLogClient client = new BinaryLogClient(
                 "127.0.0.1",
