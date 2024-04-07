@@ -3,6 +3,7 @@ package com.example.ad.index.district;
 import com.example.ad.index.IndexAware;
 import com.example.ad.utils.CommonUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
 import java.util.Map;
 import java.util.Set;
@@ -10,6 +11,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListSet;
 
 @Slf4j
+@Component
 public class UnitDistrictIndex implements IndexAware<String, Set<Long>> {
     private static Map<String, Set<Long>> districtUnitMap;
     private static Map<Long, Set<String>> unitDistrictMap;

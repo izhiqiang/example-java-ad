@@ -5,6 +5,7 @@ import com.example.ad.utils.CommonUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
+import org.springframework.stereotype.Component;
 
 import java.util.Collections;
 import java.util.List;
@@ -14,6 +15,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListSet;
 
 @Slf4j
+@Component
 public class UnitKeywordIndex implements IndexAware<String, Set<Long>> {
     private static Map<String, Set<Long>> keywordUnitMap;
     private static Map<Long, Set<String>> unitKeywordMap;
