@@ -11,11 +11,11 @@ import java.io.Serializable;
 @NoArgsConstructor
 //全参构造函数
 @AllArgsConstructor
-public class CommonResponse<T> implements Serializable {
+public class BaseResponse<T> implements Serializable {
     private Integer code;
     private String Message;
     private T data;
-    public CommonResponse(Integer code, String message) {
+    public BaseResponse(Integer code, String message) {
         this.code = code;
         this.Message = message;
     }
