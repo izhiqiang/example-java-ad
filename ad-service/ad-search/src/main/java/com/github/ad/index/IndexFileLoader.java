@@ -4,8 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.github.ad.dump.DConstant;
 import com.github.ad.dump.table.*;
 import com.github.ad.handler.AdLevelDataHandler;
-import com.github.ad.mysql.constant.OpType.OpType;
-import com.github.ad.dump.table.*;
+import com.github.ad.mysql.constant.OpType;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Component;
 

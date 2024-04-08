@@ -1,6 +1,6 @@
 package com.github.ad.mysql.dto;
 
-import com.github.ad.mysql.constant.OpType.OpType;
+import com.github.ad.mysql.constant.OpType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

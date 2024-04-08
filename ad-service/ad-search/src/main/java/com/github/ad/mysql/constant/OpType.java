@@ -1,4 +1,4 @@
-package com.github.ad.mysql.constant.OpType;
+package com.github.ad.mysql.constant;
 
 import com.github.shyiko.mysql.binlog.event.EventType;
 
@@ -9,7 +9,6 @@ public enum OpType {
     OTHER;
 
     public static OpType to(EventType eventType) {
-
         switch (eventType) {
             case EXT_WRITE_ROWS:
                 return ADD;
@@ -17,7 +16,6 @@ public enum OpType {
                 return UPDATE;
             case EXT_DELETE_ROWS:
                 return DELETE;
-
             default:
                 return OTHER;
         }

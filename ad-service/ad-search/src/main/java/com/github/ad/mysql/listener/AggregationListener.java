@@ -1,12 +1,13 @@
 package com.github.ad.mysql.listener;
 
 import com.github.ad.mysql.TemplateHolder;
-import com.github.ad.mysql.constant.OpType.BinlogRowData;
+import com.github.ad.mysql.dto.BinlogRowData;
 import com.github.ad.mysql.dto.TableTemplate;
 import com.github.shyiko.mysql.binlog.BinaryLogClient;
 import com.github.shyiko.mysql.binlog.event.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
 import java.io.Serializable;
@@ -14,6 +15,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @Slf4j
+@Component
 public class AggregationListener implements BinaryLogClient.EventListener {
     private String dbName;
     private String tableName;

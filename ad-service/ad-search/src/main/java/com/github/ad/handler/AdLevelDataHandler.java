@@ -2,7 +2,6 @@ package com.github.ad.handler;
 
 import com.alibaba.fastjson.JSON;
 import com.github.ad.dump.table.*;
-import com.github.ad.dump.table.*;
 import com.github.ad.index.DataTable;
 import com.github.ad.index.IndexAware;
 import com.github.ad.index.adplan.AdPlanIndex;
@@ -16,7 +15,7 @@ import com.github.ad.index.creativeunit.CreativeUnitObject;
 import com.github.ad.index.district.UnitDistrictIndex;
 import com.github.ad.index.interest.UnitItIndex;
 import com.github.ad.index.keyword.UnitKeywordIndex;
-import com.github.ad.mysql.constant.OpType.OpType;
+import com.github.ad.mysql.constant.OpType;
 import com.github.ad.utils.CommonUtil;
 import lombok.extern.slf4j.Slf4j;
 

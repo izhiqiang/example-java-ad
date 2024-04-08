@@ -1,9 +1,18 @@
 package com.github.ad.utils;
 
 
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang.time.DateUtils;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 import java.util.Map;
 import java.util.function.Supplier;
 
+@Slf4j
 public class CommonUtil {
 
     // 判断key 是否在map 中，如果在就直接返回，否则就在factory返回新的对象
@@ -19,5 +28,24 @@ public class CommonUtil {
         }
         result.deleteCharAt(result.length() - 1);
         return result.toString();
+    }
+
+    public static Date parseStringDate(String dateString) {
+
+        try {
+
+            DateFormat dateFormat = new SimpleDateFormat(
+                    "EEE MMM dd HH:mm:ss zzz yyyy",
+                    Locale.US
+            );
+            return DateUtils.addHours(
+                    dateFormat.parse(dateString),
+                    -8
+            );
+
+        } catch (ParseException ex) {
+            log.error("parseStringDate error: {}", dateString);
+            return null;
+        }
     }
 }

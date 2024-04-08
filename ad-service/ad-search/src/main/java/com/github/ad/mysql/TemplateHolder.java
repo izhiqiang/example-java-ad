@@ -1,7 +1,7 @@
 package com.github.ad.mysql;
 
 import com.alibaba.fastjson.JSON;
-import com.github.ad.mysql.constant.OpType.OpType;
+import com.github.ad.mysql.constant.OpType;
 import com.github.ad.mysql.dto.ParseTemplate;
 import com.github.ad.mysql.dto.TableTemplate;
 import com.github.ad.mysql.dto.Template;

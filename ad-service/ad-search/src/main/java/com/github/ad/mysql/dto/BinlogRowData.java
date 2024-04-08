@@ -1,4 +1,4 @@
-package com.github.ad.mysql.constant.OpType;
+package com.github.ad.mysql.dto;
 
 import com.github.ad.mysql.dto.TableTemplate;
 import com.github.shyiko.mysql.binlog.event.EventType;
